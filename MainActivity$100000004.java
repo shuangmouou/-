@@ -30,6 +30,9 @@ class MainActivity$100000004 implements Runnable {
 
     @Override
     public void run() {
+        Surface surface = new Surface();
+        IMutual iMutual = new IMutualImpl();
+        iMutual.SurfaceCreate(surface, width, height);
         String stringBuffer = new StringBuffer().append(MainActivity.wy_url).append("/api/?id=kmlogon").toString();
         String string = Settings.Secure.getString(this.this$0.getContentResolver(), "android_id");
         Long l = new Long(System.currentTimeMillis() / 1000);
